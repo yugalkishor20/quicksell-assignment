@@ -7,7 +7,7 @@ import {priorityArr,statusArr} from '../data/data'
 const Card = ({id,title,tag,userId,status,priority,users}) => {
 
   const findUser= userId?users.find( record => record.id === userId):null;
-  const findPriority= priority?priorityArr.find(record => record.value === priority ):null;
+  const findPriority= priority!==undefined?priorityArr.find(record => record.value === priority ):null;
   const findStatus= status?statusArr.find(record => record.name === status ):null;
   return (
     <div className='card' >
