@@ -6,7 +6,7 @@ import {GrFormClose} from 'react-icons/gr'
 
 const Header = () => {
   const location= useLocation();
-  const [searchParams, setSearchParams] = useSearchParams({order:'tiltle'});
+  const [searchParams, setSearchParams] = useSearchParams({order:'priority'});
   const [group, setGroup] = useState(location.pathname.slice(1));
   const [order, setOrder] = useState(searchParams.get('order'));
   const [box,setBox]=useState(false);
